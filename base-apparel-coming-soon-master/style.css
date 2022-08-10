@@ -1,0 +1,154 @@
+body {
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Josefin Sans", sans-serif;
+  color: hsl(0, 36%, 70%);
+  overflow: hidden;
+  display: flex;
+}
+
+.c1 {
+  width: 61vw;
+  background: url(./images/bg-pattern-desktop.svg);
+  background-size: cover;
+}
+
+.container {
+  width: 55%;
+  margin: 0 64px;
+}
+
+.logo {
+  padding: 64px 0;
+}
+
+.heading {
+  font-size: 80px;
+  text-transform: uppercase;
+  letter-spacing: 24px;
+  margin-bottom: 32px;
+  margin-top: 64px;
+}
+
+.p1 {
+  color: hsl(0, 36%, 70%);
+  font-weight: 300;
+}
+
+.p2 {
+  color: hsl(0, 6%, 24%);
+  font-weight: 600;
+}
+
+.input-email {
+  border-radius: 30px;
+  color: hsl(0, 6%, 24%);
+  border: 1px solid hsl(0, 36%, 70%);
+  width: 90%;
+  margin-top: 32px;
+  display: flex;
+  margin-bottom: 64px;
+}
+
+input {
+  outline: none;
+  background: transparent;
+  border: none;
+  color: hsl(0, 6%, 24%);
+  font-size: 16px;
+}
+
+button {
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  border-radius: 30px;
+  padding: 8px 32px;
+  border: none;
+  box-shadow: 2px 2px 20px 2px hsl(0, 0%, 70%);
+}
+
+button:hover {
+  opacity: 0.6;
+}
+
+button:active {
+  opacity: 0.8;
+}
+
+::placeholder {
+  color: hsl(0, 36%, 70%);
+  opacity: 0.5;
+}
+
+.error {
+  color: hsl(0, 93%, 68%);
+}
+
+.hero-mobile {
+    width: 100%;
+    margin-top: 100px;
+    display: none;
+}
+
+.hero-mobile img {
+    background-size: cover;
+    width: 100%;
+}
+
+@media only screen and (max-width: 1000px) {
+    .heading {
+        font-size: 60px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    body {
+        display: block;
+        overflow: visible;
+    }
+
+    .content {
+        text-align: center;
+        position: relative;
+        top: 350px;
+        margin-bottom: 32px;
+    }
+
+    .c1 {
+        width: 100vw;
+    }
+
+    .container {
+        width: 80%;
+        margin: auto;
+    }
+
+    .heading {
+        font-size: 64px;
+    }
+
+    .img img {
+        display: none;
+    }
+
+    .hero-mobile {
+        display: block;
+        position: absolute;
+        top: 0;
+    }
+
+    .logo {
+        padding: 32px 0;
+    }
+
+}
+
+@media only screen and (max-width: 450px) {
+    .heading {
+        font-size: 32px;
+    }
+
+    .content {
+        top: 250px;
+    }
+}

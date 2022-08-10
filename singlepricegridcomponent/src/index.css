@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Baloo+Tammudu+2&family=Open+Sans&display=swap");
+
+body {
+  background: rgb(240, 240, 240);
+}
+
+h2 {
+  font-family: "Open Sans", sans-serif;
+}
+
+h3 {
+  font-family: "Open Sans", sans-serif;
+}
+
+p {
+  font-family: "Baloo Tammudu 2", cursive;
+}
+
+.container {
+  width: 800px;
+  height: 540px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%, -50%);
+  box-shadow: 2px 2px 20px 2px rgba(200, 200, 200);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "box1 box1"
+    "box2 box3";
+}
+
+.box1 {
+  background: rgb(255, 255, 255);
+  grid-area: box1;
+  padding: 5%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.box1 h2 {
+  color: rgb(42, 179, 176);
+}
+
+.box1 h3 {
+  color: rgb(190, 223, 50);
+}
+
+.box1 p {
+  color: rgb(148, 148, 148);
+}
+
+.box2 {
+  background: rgb(42, 179, 176);
+  color: rgb(255, 255, 255);
+  grid-area: box2;
+  padding: 10%;
+  border-bottom-left-radius: 10px;
+}
+
+.box2 h1 {
+  display: inline-block;
+  margin: 0;
+}
+
+.box3 {
+  background: rgb(73, 190, 189);
+  grid-area: box3;
+  color: rgb(255, 255, 255);
+  padding: 10%;
+  border-bottom-right-radius: 10px;
+}
+
+.box3 p {
+  line-height: 0.6;
+}
+
+.btn {
+  width: 80%;
+  height: 40px;
+  background: rgb(190, 223, 50);
+  border-radius: 3px;
+  box-shadow: 2px 2px 20px 2px rgb(62, 158, 156);
+  text-align: center;
+  padding: 10px 0;
+}
+
+.btn h3 {
+  margin: 0;
+  padding-top: 5px;
+}
+
+.btn:hover {
+  background: rgb(202, 233, 64);
+}
+
+@media only screen and (max-width: 600px) {
+  .container {
+    width: 80vw;
+    height: 80vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+      "box1"
+      "box2"
+      "box3";
+  }
+
+  .box2 {
+    border-bottom-left-radius: 0px;
+  }
+
+  .box3 {
+    border-bottom-left-radius: 10px;
+  }
+}

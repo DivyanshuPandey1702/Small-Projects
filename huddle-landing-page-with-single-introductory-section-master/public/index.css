@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+body {
+  background-color: hsl(257, 40%, 49%);
+  background-image: url("./images/bg-desktop.svg");
+  color: rgb(255, 255, 255);
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  line-height: 0.8;
+}
+
+p {
+  font-family: "Open Sans", sans-serif;
+}
+
+.container {
+  width: 90vw;
+  margin: auto;
+}
+
+.nav {
+  padding: 32px 0;
+  margin-bottom: 32px;
+}
+
+.main {
+  display: flex;
+}
+
+.content {
+  padding-left: 64px;
+}
+
+.registerBtn {
+  width: 200px;
+  height: 48px;
+  padding: 8px;
+  background: rgb(255, 255, 255);
+  color: hsl(257, 40%, 49%);
+  border-radius: 48px;
+  text-align: center;
+  box-shadow: 2px 2px 20px 2px hsl(257, 36%, 42%);
+}
+
+.registerBtn p {
+  margin: 0;
+  padding-top: 12px;
+}
+
+.registerBtn:hover {
+  background: hsl(300, 69%, 71%);
+  color: rgb(255, 255, 255);
+}
+
+.footer {
+  color: white;
+  display: flex;
+  justify-content: right;
+}
+
+.circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 100%;
+  border: 3px solid rgb(255, 255, 255);
+  text-align: center;
+  padding: 12px 6px 0 6px;
+  margin: 4px;
+}
+
+.circle:hover {
+  color: hsl(300, 69%, 71%);
+  border: 3px solid hsl(300, 69%, 71%);
+}
+
+@media only screen and (max-width: 600px) {
+  .main {
+    display: block;
+  }
+
+  .content {
+    padding: 0;
+  }
+
+  .registerBtn {
+    margin-bottom: 16px;
+  }
+
+  .main img {
+    width: 400px; 
+  }
+
+  body {
+    text-align: center;
+    background-image: url("./images/bg-mobile.svg");
+  }
+
+  .footer {
+    justify-content: center;
+  }
+
+  .registerBtn {
+    margin: auto;
+    margin-bottom: 16px;
+  }
+}

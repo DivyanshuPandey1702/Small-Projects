@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+  </head>
+  <body>
+    <div class="hero-mobile">
+      <img src="./images/hero-mobile.jpg">
+    </div>
+    <div class="c1">
+      <div class="container">
+        <div class="logo">
+          <img
+            src="./images/logo.svg"
+            alt="logo"
+          />
+        </div>
+        <div class="content">
+          <div class="heading">
+            <div class="p1">We're</div>
+            <div class="p2">Coming</div>
+            <div class="p2">soon</div>
+          </div>
+          <p>
+            Hello fellow shoppers! We're currently building our new fashion
+            store. Add your email below to stay up-to-date with announcements
+            and our launch deals.
+          </p>
+          <div class="input-email">
+            <input
+              type="email"
+              name="email"
+              class="email-input"
+              placeholder="Email Address"
+              style="flex-grow: 1; padding-left: 16px"
+            />
+            <img
+              class="icon-error"
+              src="./images/icon-error.svg"
+              style="padding: 8px; display: none"
+            />
+            <button onclick="validateEmail()">
+              <img
+                src="./images/icon-arrow.svg"
+                alt=""
+              />
+            </button>
+          </div>
+          <p class="error" style="display: none">
+            Please provide a valid email
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="img">
+      <img 
+        src="./images/hero-desktop.jpg"
+        alt="img"
+      />
+    </div>
+    <script>
+      function validateEmail() {
+        var email = document.getElementsByName("email")[0].value;
+        var re = /\S+@\S+\.\S+/;
+        if (!re.test(email)) {
+          document.getElementsByClassName("error")[0].style.display = "block";
+          document.getElementsByClassName("input-email")[0].style.border =
+            "1px solid hsl(0, 93%, 68%)";
+          document.getElementsByClassName("icon-error")[0].style.display =
+            "block";
+          document.getElementsByClassName("email-input")[0].style.color =
+            "hsl(0, 93%, 68%)";
+        } else {
+          document.getElementsByClassName("error")[0].style.display = "none";
+          document.getElementsByClassName("input-email")[0].style.border =
+            "1px solid hsl(0, 36%, 70%)";
+          document.getElementsByClassName("icon-error")[0].style.display =
+            "none";
+          document.getElementsByClassName("email-input")[0].style.color =
+            "hsl(0, 6%, 24%)";
+        }
+      }
+    </script>
+  </body>
+</html>
